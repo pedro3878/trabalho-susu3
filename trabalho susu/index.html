@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Realeza - Início</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina tela-inicio-fundo">
+
+    <div class="faixa-topo">
+        <header class="cabecalho container">
+            <a href="index.html" class="logo-link">
+                <img src="unnamed.png"
+                     onerror="this.onerror=null; this.src='unnamed.png';"
+                     alt="Logo Burger Realeza" class="logo-img">
+            </a>
+
+            <nav class="menu-navegacao">
+                <ul>
+                    <li><a href="#avaliacoes">AVALIAÇÕES</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#" onclick="abrirCarrinho(); return false;">MEUS PEDIDOS <span id="contador-carrinho" class="badge-carrinho">0</span></a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero container">
+            <div class="hero-texto">
+                <h1>AQUI VOCÊ ENTRA NA NOSSA REALEZA.</h1>
+                <a href="#menu" class="btn-vermelho-pilula">FAÇA SEU PEDIDO</a>
+            </div>
+
+            <a href="produto.html?nome=REI%20DA%20CASA&preco=55.00&img=HAMBUGER%20MEIO.avif" class="hero-imagem">
+                <span class="selo-rei">O REI DA CASA</span>
+                <img src="HAMBUGER MEIO.avif"
+                     onerror="this.onerror=null; this.src='unnamed.png';"
+                     alt="Hambúrguer destaque Burger Realeza">
+            </a>
+        </section>
+    </div>
+
+    <main>
+        <section id="menu" class="secao-mostarda">
+            <div class="container">
+                <h2 class="titulo-secao">NOSSO MENU</h2>
+
+                <div class="grade-menu">
+                    <article class="card-lanche">
+                        <a href="produto.html?nome=DUPLO%20CHEDDAR%20BACON&preco=49.90&img=HAMBURGUER%20OP%C3%87AO%201.avif" class="foto-lanche">
+                            <img src="HAMBURGUER OPÇAO 1.avif"
+                                 onerror="this.onerror=null; this.src='unnamed.png';"
+                                 alt="Duplo Cheddar Bacon">
+                        </a>
+                        <p class="preco-lanche">R$ 49,90</p>
+                        <div class="botoes-card">
+                            <button type="button" class="btn-comprar" onclick="comprarAgora('Duplo Cheddar Bacon', 49.90)">COMPRAR</button>
+                            <button type="button" class="btn-carrinho" onclick="adicionarAoCarrinho('Duplo Cheddar Bacon', 49.90)">ADICIONAR NO CARRINHO</button>
+                        </div>
+                    </article>
+
+                    <article class="card-lanche">
+                        <a href="produto.html?nome=REALEZA%20MOLHO%20ESPECIAL&preco=49.90&img=HAMBURGUER%20OP%C3%87AO%202.avif" class="foto-lanche">
+                            <img src="HAMBURGUER OPÇAO 2.avif"
+                                 onerror="this.onerror=null; this.src='unnamed.png';"
+                                 alt="Realeza Molho Especial">
+                        </a>
+                        <p class="preco-lanche">R$ 49,90</p>
+                        <div class="botoes-card">
+                            <button type="button" class="btn-comprar" onclick="comprarAgora('Realeza Molho Especial', 49.90)">COMPRAR</button>
+                            <button type="button" class="btn-carrinho" onclick="adicionarAoCarrinho('Realeza Molho Especial', 49.90)">ADICIONAR NO CARRINHO</button>
+                        </div>
+                    </article>
+
+                    <article class="card-lanche">
+                        <a href="produto.html?nome=AMERICAN%20BURGUER&preco=55.00&img=HAMBURGUER%20OP%C3%87AO%203.avif" class="foto-lanche">
+                            <img src="HAMBURGUER OPÇAO 3.avif"
+                                 onerror="this.onerror=null; this.src='HAMBURGUER OPÇAO 3.avif';"
+                                 alt="American Burguer">
+                        </a>
+                        <p class="preco-lanche">R$ 55,00</p>
+                        <div class="botoes-card">
+                            <button type="button" class="btn-comprar" onclick="comprarAgora('American Burguer', 55.00)">COMPRAR</button>
+                            <button type="button" class="btn-carrinho" onclick="adicionarAoCarrinho('American Burguer', 55.00)">ADICIONAR NO CARRINHO</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="avaliacoes" class="secao-mostarda secao-avaliacoes">
+            <div class="container">
+                <h2 class="titulo-secao">NOSSAS AVALIAÇÕES</h2>
+
+                <div class="lista-avaliacoes">
+                    <article class="item-avaliacao">
+                        <div class="cabecalho-avaliacao">
+                            <span class="nome-cliente">JOSÉ</span>
+                            <span class="nota-cliente">5.0 <span class="estrela">&#9733;</span></span>
+                        </div>
+                        <div class="balao-avaliacao">
+                            <p>Hambúrguer artesanal excelente, carne suculenta no ponto certo e queijo bem derretido. Atendimento rápido e entrega impecável.</p>
+                        </div>
+                    </article>
+
+                    <article class="item-avaliacao">
+                        <div class="cabecalho-avaliacao">
+                            <span class="nome-cliente">JOSÉ</span>
+                            <span class="nota-cliente">5.0 <span class="estrela">&#9733;</span></span>
+                        </div>
+                        <div class="balao-avaliacao">
+                            <p>Melhor lanche da região! Os ingredientes são muito frescos, o pão é macio e o sabor realmente faz jus ao nome da casa.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p class="telefone-rodape">(31) 9999999-9999</p>
+            <p class="copyright-rodape">&copy; Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <div id="fundo-carrinho" class="fundo-escuro" onclick="fecharCarrinho()"></div>
+    <aside id="gaveta-carrinho" class="gaveta-carrinho">
+        <div class="gaveta-topo">
+            <h3>MEUS PEDIDOS</h3>
+            <button type="button" class="btn-fechar-gaveta" onclick="fecharCarrinho()">&times;</button>
+        </div>
+
+        <div id="lista-itens-carrinho" class="gaveta-corpo">
+            <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="gaveta-rodape">
+            <div class="linha-total">
+                <span>TOTAL (Entrega Grátis):</span>
+                <strong id="valor-total-carrinho">R$ 0,00</strong>
+            </div>
+            <button type="button" class="btn-finalizar-pedido" onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <div id="aviso-flutuante" class="aviso-flutuante"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Realeza - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina tela-login-fundo">
+
+    <header class="cabecalho container">
+        <a href="index.html" class="logo-link">
+            <img src="unnamed.png"
+                 onerror="this.onerror=null; this.src='https://placehold.co/120x120/141414/FFE200?text=REALEZA';"
+                 alt="Logo Burger Realeza" class="logo-img">
+        </a>
+
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="index.html#avaliacoes">AVALIAÇÕES</a></li>
+                <li><a href="index.html#menu">MENU</a></li>
+                <li><a href="#" onclick="abrirCarrinho(); return false;">MEUS PEDIDOS <span id="contador-carrinho" class="badge-carrinho">0</span></a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-area container">
+        <form id="form-cadastro" class="cartao-vermelho-login" onsubmit="salvarCadastro(event)">
+            <input type="text" id="input-nome" class="campo-pilula" placeholder="NOME" required>
+            <input type="email" id="input-email" class="campo-pilula" placeholder="E-MAIL" required>
+            <input type="text" id="input-cpf" class="campo-pilula" placeholder="CPF" maxlength="14" required>
+            <input type="text" id="input-cep" class="campo-pilula" placeholder="CEP" maxlength="9" required>
+
+            <button type="submit" class="btn-concluir">CONCLUIR</button>
+        </form>
+    </main>
+
+    <div id="fundo-carrinho" class="fundo-escuro" onclick="fecharCarrinho()"></div>
+    <aside id="gaveta-carrinho" class="gaveta-carrinho">
+        <div class="gaveta-topo">
+            <h3>MEUS PEDIDOS</h3>
+            <button type="button" class="btn-fechar-gaveta" onclick="fecharCarrinho()">&times;</button>
+        </div>
+
+        <div id="lista-itens-carrinho" class="gaveta-corpo">
+            <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="gaveta-rodape">
+            <div class="linha-total">
+                <span>TOTAL (Entrega Grátis):</span>
+                <strong id="valor-total-carrinho">R$ 0,00</strong>
+            </div>
+            <button type="button" class="btn-finalizar-pedido" onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <div id="aviso-flutuante" class="aviso-flutuante"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

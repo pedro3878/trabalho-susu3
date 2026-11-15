@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Realeza - Detalhes do Produto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina tela-detalhes-fundo">
+
+    <header class="cabecalho container">
+        <a href="index.html" class="logo-link">
+            <img src="unnamed.png"
+                 onerror="this.onerror=null; this.src='https://placehold.co/120x120/141414/FFE200?text=REALEZA';"
+                 alt="Logo Burger Realeza" class="logo-img">
+        </a>
+
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="index.html#avaliacoes">AVALIAÇÕES</a></li>
+                <li><a href="index.html#menu">MENU</a></li>
+                <li><a href="#" onclick="abrirCarrinho(); return false;">MEUS PEDIDOS <span id="contador-carrinho" class="badge-carrinho">0</span></a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detalhes-conteudo container">
+        <div class="detalhes-coluna-imagem">
+            <span class="selo-entrega">ENTREGA GRATIS</span>
+            <div class="caixa-foto-detalhe">
+                <img id="detalhe-img" src="HAMBURGUER OPÇAO 1.avif"
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=85';"
+                     alt="American Burguer">
+            </div>
+        </div>
+
+        <div class="detalhes-coluna-info">
+            <h1 id="detalhe-nome" class="detalhe-titulo">AMERICAN BURGUER</h1>
+            <p id="detalhe-preco" class="detalhe-preco">R$55,00</p>
+
+            <div class="detalhes-botoes">
+                <button type="button" id="btn-detalhe-carrinho" class="btn-detalhe-amarelo">ADICIONAR AO CARRINHO</button>
+                <button type="button" id="btn-detalhe-comprar" class="btn-detalhe-vermelho">COMPRAR JÁ</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p class="telefone-rodape">(31) 9999999-9999</p>
+            <p class="copyright-rodape">&copy; Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <div id="fundo-carrinho" class="fundo-escuro" onclick="fecharCarrinho()"></div>
+    <aside id="gaveta-carrinho" class="gaveta-carrinho">
+        <div class="gaveta-topo">
+            <h3>MEUS PEDIDOS</h3>
+            <button type="button" class="btn-fechar-gaveta" onclick="fecharCarrinho()">&times;</button>
+        </div>
+
+        <div id="lista-itens-carrinho" class="gaveta-corpo">
+            <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="gaveta-rodape">
+            <div class="linha-total">
+                <span>TOTAL (Entrega Grátis):</span>
+                <strong id="valor-total-carrinho">R$ 0,00</strong>
+            </div>
+            <button type="button" class="btn-finalizar-pedido" onclick="finalizarPedido()">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <div id="aviso-flutuante" class="aviso-flutuante"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
